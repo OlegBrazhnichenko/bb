@@ -7,7 +7,6 @@ import {SetStep, SetLocation, SetCategory, SetService, SetAddress, SetDate, SetT
 import {GetServices, GetCategories} from 'data/Booking/API';
 import {getNextStep, getPreviousStep, STEPS} from 'services/Booking';
 
-import moment from 'moment';
 @connect((state)=>{
   return {
     services: state.Booking.services,
@@ -86,8 +85,14 @@ export default class Booking extends Component {
   }
 
   componentWillMount() {
+
+    if(!this.props.bookingType) {
+      this.context.router.push('/');
+    }
+
     this.props.getServices(); // preload data
     this.props.getCategories();
+
     this.props.router.setRouteLeaveHook(this.props.route, () => {
       this.props.setStep(STEPS.SUBURB_SELECT);
       this.props.setLocation(null);
@@ -131,7 +136,7 @@ export default class Booking extends Component {
   }
 
   render() {
-    console.log(moment().format("HH"));
+
     return (
       <BookingComponent services={this.props.services}
                         categories={this.props.categories}

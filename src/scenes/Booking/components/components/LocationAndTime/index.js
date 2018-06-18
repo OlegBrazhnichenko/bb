@@ -29,6 +29,12 @@ export default class LocationAndTime extends Component {
     this.handleSwitchToNextStep = this.handleSwitchToNextStep.bind(this);
   }
 
+  componentWillMount() {
+    if(this.props.bookingType === "soon") {
+      this.props.onDateSelect(moment());
+    }
+  }
+
   handleAddressSelect(e) {
     this.props.onAddressSelect(e.target.value);
   }
