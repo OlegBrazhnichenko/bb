@@ -1,0 +1,66 @@
+{
+  "html-webpack-plugin for \"index.html\"": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {}
+      }
+    },
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {}
+      }
+    },
+    {
+      "modules": {
+        "byIdentifier": {
+          "node_modules/lodash/lodash.js": 0,
+          "node_modules/webpack/buildin/global.js": 1,
+          "node_modules/webpack/buildin/module.js": 2,
+          "node_modules/html-webpack-plugin/lib/loader.js!src/index.ejs": 3
+        },
+        "usedIds": {
+          "0": 0,
+          "1": 1,
+          "2": 2,
+          "3": 3
+        }
+      },
+      "chunks": {
+        "byName": {},
+        "byBlocks": {},
+        "usedIds": {
+          "0": 0
+        }
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "node_modules/babel-loader/lib/index.js?cacheDirectory!src/index.js": 0
+    },
+    "usedIds": {
+      "0": 0
+    }
+  },
+  "chunks": {
+    "byName": {
+      "main": 0
+    },
+    "byBlocks": {},
+    "usedIds": {
+      "0": 0
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "presets": [
+    "react",
+    "stage-1"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "latest",
+      ],
+      "plugins": [
+        [
+          "import",
+          {
+            "libraryName": "antd"
+          }
+        ],
+        "transform-decorators-legacy",
+        "transform-class-properties"
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "latest",
+          {
+            "es2015": {
+              "modules": false
+            }
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "import",
+          {
+            "libraryName": "antd"
+          }
+        ],
+        "transform-react-remove-prop-types",
+        "add-react-displayname",
+        "transform-decorators-legacy",
+        "transform-class-properties"
+      ]
+    },
+    "test": {
+      "presets": [
+        "latest"
+      ]
+    }
+  }
+}
+

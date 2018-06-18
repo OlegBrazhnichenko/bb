@@ -1,0 +1,45 @@
+.suburb-select--component {
+  .suburb-select {
+     text-align: center;
+    .autocomplete {
+      text-align: center;
+      color: #65B0FD;
+    }
+  }
+  .girls {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    h1{
+      text-align: center;
+    }
+    .girl {
+      width:30%;
+      .photo {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .name {
+        padding: 5px 0;
+        text-align: center;
+        font-weight: bold;
+      }
+      &.online{
+        .photo {
+          position: relative;
+          &:before {
+            height: 15px;
+            width: 15px;
+            background-color: lawngreen;
+            border-radius: 30px;
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
